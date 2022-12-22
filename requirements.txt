@@ -1,6 +1,12 @@
+# local packages
+-e .
+
+# Third party packages
 dvc
 dvc[gdrive]
 sklearn
 pandas
 pyyaml
 numpy
+pytest
+tox
