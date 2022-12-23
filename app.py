@@ -25,7 +25,7 @@ def predict(data):
     model = joblib.load(model_dir_path)
     prediction = model.predict(data)
     print(prediction)
-    return prediction
+    return prediction[0]
 
 def api_response(request):
     try:
@@ -39,7 +39,6 @@ def api_response(request):
         return error
 
 @app.route("/", methods=["GET","POST"])
-
 def index():
     if request.method=="POST":
         try:
@@ -55,7 +54,7 @@ def index():
 
         except Exception as e:
             print(e)
-            error={error:"Something went wrong! Try again"}
+            error={"error":"Something went wrong! Try again"}
             return render_template("404.html",error=error)
     else:
         return render_template("index.html")
