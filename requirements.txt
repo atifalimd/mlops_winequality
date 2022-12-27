@@ -6,11 +6,10 @@ dvc
 dvc[gdrive]
 sklearn
 pandas
-pyyaml
+pyYAML
 numpy
 pytest
 tox
 flake8
 flask
 gunicorn
-python 
