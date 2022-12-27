@@ -10,6 +10,6 @@ pyYAML
 numpy
 pytest
 tox
-flake8=6.0.0
+flake8
 flask
 gunicorn
